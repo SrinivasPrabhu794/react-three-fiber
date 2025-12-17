@@ -446,6 +446,11 @@ export function createEvents(store: UseBoundStore<RootState>) {
         internal.initialHits = hits.map((hit) => hit.eventObject)
       }
 
+      // Ignore both mouse clicks and touch taps that moved too far
+      if (isClickEvent && delta > 2) {
+        return
+      }
+
       // If a click yields no results, pass it back to the user as a miss
       // Missed events have to come first in order to establish user-land side-effect clean up
       if (isClickEvent && !hits.length) {
@@ -466,12 +471,12 @@ export function createEvents(store: UseBoundStore<RootState>) {
         if (!instance?.eventCount) return
 
         /*
-        MAYBE TODO, DELETE IF NOT: 
+        MAYBE TODO, DELETE IF NOT:
           Check if the object is captured, captured events should not have intersects running in parallel
           But wouldn't it be better to just replace capturedMap with a single entry?
           Also, are we OK with straight up making picking up multiple objects impossible?
-          
-        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId        
+
+        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId
         if (pointerId !== undefined) {
           const capturedMeshSet = internal.capturedMap.get(pointerId)
           if (capturedMeshSet) {
