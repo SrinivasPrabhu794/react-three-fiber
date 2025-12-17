@@ -1,6 +1,6 @@
 {
-  "name": "@srinivasprabhu/fiber",
-  "version": "1.0.0",
+  "name": "@react-three/fiber",
+  "version": "8.14.3",
   "description": "A React renderer for Threejs",
   "keywords": [
     "react",
@@ -21,14 +21,14 @@
   "homepage": "https://github.com/pmndrs/react-three-fiber#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SrinivasPrabhu794/react-three-fiber.git"
+    "url": "git+https://github.com/pmndrs/react-three-fiber.git"
   },
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/react-three-fiber"
   },
-  "main": "dist/srinivasprabhu-fiber.cjs.js",
-  "module": "dist/srinivasprabhu-fiber.esm.js",
+  "main": "dist/react-three-fiber.cjs.js",
+  "module": "dist/react-three-fiber.esm.js",
   "types": "dist/react-three-fiber.cjs.d.ts",
   "react-native": "native/dist/react-three-fiber-native.cjs.js",
   "sideEffects": false,

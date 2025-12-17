@@ -1,5 +1,5 @@
 {
-  "main": "dist/srinivasprabhu-fiber-native.cjs.js",
-  "module": "dist/srinivasprabhu-fiber-native.esm.js",
+  "main": "dist/react-three-fiber-native.cjs.js",
+  "module": "dist/react-three-fiber-native.esm.js",
   "types": "dist/react-three-fiber-native.cjs.d.ts"
 }
